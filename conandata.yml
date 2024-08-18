@@ -8,7 +8,7 @@ sources:
       "x86":
         url: "https://conan.privatehive.de/ui/api/v1/download?repoKey=blob&path=appimage%252Fappimagetool-i686.AppImage&isNativeBrowsing=false"
         sha1: "9dc874f11487dea8a34b15d50002d761e38c85eb"
-        filename: "appimagetool-x86.AppImage"
+        filename: "appimagetool-i686.AppImage"
       "armv6":
         url: "https://conan.privatehive.de/ui/api/v1/download?repoKey=blob&path=appimage%252Fappimagetool-armv6.AppImage&isNativeBrowsing=false"
         sha1: "f493183160c8dddb9eea95a76da06148bf27595e"
@@ -16,11 +16,11 @@ sources:
       "armv7":
         url: "https://conan.privatehive.de/ui/api/v1/download?repoKey=blob&path=appimage%252Fappimagetool-armhf.AppImage&isNativeBrowsing=false"
         sha1: "e6b24138ef3abaae8cdfa90ede3d7069c2ed454d"
-        filename: "appimagetool-armv7.AppImage"
+        filename: "appimagetool-armhf.AppImage"
       "armv8":
         url: "https://conan.privatehive.de/ui/api/v1/download?repoKey=blob&path=appimage%252Fappimagetool-aarch64.AppImage&isNativeBrowsing=false"
         sha1: "17d08c58364207033e1874ea9c0023041d720162"
-        filename: "appimagetool-armv8.AppImage"
+        filename: "appimagetool-aarch64.AppImage"
     "runtime":
       "x86_64":
         url: "https://conan.privatehive.de/ui/api/v1/download?repoKey=blob&path=appimage%252Fruntime-x86_64&isNativeBrowsing=false"
