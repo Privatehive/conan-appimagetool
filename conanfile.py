@@ -3,6 +3,7 @@
 
 from conan import ConanFile
 from conan.tools.files import download, copy, rm
+from conan.tools.system.package_manager import Apt
 from conan.errors import ConanInvalidConfiguration
 import json, os
 
@@ -46,6 +47,12 @@ class AppImageToolConan(ConanFile):
             raise ConanInvalidConfiguration(f"{self.name} {self.version} is only supported for the following operating systems: {valid_os}")
         if str(self.settings.arch) not in self.valid_arch:
             raise ConanInvalidConfiguration(f"{self.name} {self.version} is only supported for the following architectures on {self.settings.os}: {valid_arch}")
+
+    def system_requirements(self):
+        if self.settings.os == "Linux":
+            apt = Apt(self)
+            pack_names = ["libgpgme11"]
+            apt.install(pack_names, update=True)
 
     def build(self):
         appimagetool = self.conan_data["sources"][self.version]["tool"][str(self.settings.arch)]["filename"]
